@@ -28,6 +28,7 @@ The framework setup is done
 - We need a playwright test runner from Microscoft. As VSC is also from microsoft, its available in the extentions
     - goto settings in VSC -> extensions -> search for playwright -> Playwright Test for VSCode - install - Reopen VSCode if needed
     - just click on the run icon near the test inside the test created, this helps to track the run history
+    - Right click on the play button in our test and select Reveal in TestExplorer to run your test. Its same as in testrunner OR click on the funnel shape in your left panel in VSCode
 
 ## Framework
 - e2e tests are written under the /tests folder
@@ -40,21 +41,21 @@ The framework setup is done
 ## Playwright Commands - Good to know
 If the fullyParallel is true the you can see test running in parallel in different browsers (as per specified)
 - How to run a test (headless mode)
-```
-npx playwright test
-```
+    ```
+    npx playwright test
+    ```
 - How to run in a headed mode
-```
-npx playwright test --headed
-```
+    ```
+    npx playwright test --headed
+    ```
 - How to run in a headed mode in a specific browser
-```
-npx playwright test --headed --project=chromium
-```
+    ```
+    npx playwright test --headed --project=chromium
+    ```
 - to show the testreport
-```
-npx playwright show-report
-```
+    ```
+    npx playwright show-report
+    ```
 - Run the tests in UI mode with //a[text()='Docs'] debugging mode
 USing this command, the playwright testrunner opens 
     - you have a Filter option on top to search for specific test, to select which browser you want to run your test and filter based on passed,failed and skipped
@@ -68,7 +69,8 @@ USing this command, the playwright testrunner opens
         - Networks tab
         - Attachment tab - generated the error-context file
         - Locator tab - which is used to find or highlight an element or work with xpaths to find the element eg: //a[text()='Docs']
-```
-npx playwright test --ui
-```
+
+        ```
+        npx playwright test --ui
+        ```
  
