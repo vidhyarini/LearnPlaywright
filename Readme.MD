@@ -56,8 +56,11 @@ If the fullyParallel is true the you can see test running in parallel in differe
     ```
     npx playwright show-report
     ```
-- Run the tests in UI mode with //a[text()='Docs'] debugging mode
+- Run the tests in UI mode with //a[text()='Docs'] in Locator tab in debugging mode
 USing this command, the playwright testrunner opens 
+        ```
+        npx playwright test --ui
+        ```
     - you have a Filter option on top to search for specific test, to select which browser you want to run your test and filter based on passed,failed and skipped
     - below is your test listed where you can run it and see how the test runs and also open the source next to the play button
     - in addition you have a 
@@ -70,7 +73,5 @@ USing this command, the playwright testrunner opens
         - Attachment tab - generated the error-context file
         - Locator tab - which is used to find or highlight an element or work with xpaths to find the element eg: //a[text()='Docs']
 
-        ```
-        npx playwright test --ui
-        ```
+
  
