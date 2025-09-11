@@ -55,12 +55,16 @@ test('toolshop test', async()=>{
     console.log("searchfieldExist: "+searchfieldExist);
     
     //6. data-test
-    const searchbtn:Locator = page.locator('[data-test="search-submit"]').describe("submit button");
+    //const searchbtn:Locator = page.locator('[data-test="search-submit"]').describe("submit button");
+    
+    const searchbtn:Locator = page.getByTestId('search-submit').describe("submit button");
+
     const searchbtnExist = await searchbtn.isEnabled();
     console.log("searchbtnExist: "+searchbtnExist);
     await searchbtn.click();
 
     await page.screenshot({path: 'search.png'})
+
 
     expect(title).toContain('Practice Software Testing - Toolshop');
 

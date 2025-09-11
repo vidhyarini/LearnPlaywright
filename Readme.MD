@@ -73,5 +73,20 @@ USing this command, the playwright testrunner opens
         - Attachment tab - generated the error-context file
         - Locator tab - which is used to find or highlight an element or work with xpaths to find the element eg: //a[text()='Docs']
 
+## Locators
+- In order to use a customed testattribute like data-test, you need to define it in playwright.config.ts under "use" like,
 
- 
+```
+ use: {
+    testIdAttribute: 'data-test',
+  }
+```
+then we can use in test like this
+```
+page.getByTestId('search-submit')
+```
+- we can also use testattribute without defining like this:
+  
+```
+page.locator('[data-test="search-submit"]')
+```
