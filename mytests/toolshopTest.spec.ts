@@ -14,6 +14,7 @@ test('toolshop test', async()=>{
 
     const title = await page.title();
     console.log('Page title: ', title);
+
 //different types of locator
     //1. id
    // const search = await page.locator('#search-query');
@@ -67,6 +68,14 @@ test('toolshop test', async()=>{
 
 
     expect(title).toContain('Practice Software Testing - Toolshop');
+
+    // getByRole
+    await expect(page.getByRole('img', { name: 'Banner' })).toBeVisible();
+    await expect(page.getByRole('link',{name:'Contact'})).toBeVisible(); //text is considered as name
+    await expect(page.getByRole('checkbox',{name:' Wrench '})).toBeVisible();
+
+    //if there is no name or text available but only one checkbox is visible
+    //just use page.getByRole('checkbox').click();
 
     await browser.close
 })

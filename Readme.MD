@@ -74,6 +74,7 @@ USing this command, the playwright testrunner opens
         - Locator tab - which is used to find or highlight an element or work with xpaths to find the element eg: //a[text()='Docs']
 
 ## Locators
+### Locate by test id
 - In order to use a customed testattribute like data-test, you need to define it in playwright.config.ts under "use" like,
 
 ```
@@ -90,3 +91,13 @@ page.getByTestId('search-submit')
 ```
 page.locator('[data-test="search-submit"]')
 ```
+Refer: https://playwright.dev/docs/locators#locate-by-test-id
+
+### Locator - getByRole
+Find Elements using ARIA Roles - Accessibility Role
+The different types of roles are listed in getByRole, hover on it and click on the link "supported roles here" (see image). You will reach here to find what all role it supports
+https://www.w3.org/TR/wai-aria-1.2/#role_definitions
+
+![alt text](image.png)
+
+Refer also: https://playwright.dev/docs/api/class-page#page-get-by-role
