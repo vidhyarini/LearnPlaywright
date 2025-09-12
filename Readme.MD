@@ -101,3 +101,13 @@ https://www.w3.org/TR/wai-aria-1.2/#role_definitions
 ![alt text](image.png)
 
 Refer also: https://playwright.dev/docs/api/class-page#page-get-by-role
+
+## Browser Type
+By default in playwright browser will open in InCognito mode.
+There are some instances where the plugins, settings should be available when opening the browser.
+So this test will help to open in a normal browser
+```
+noConitomodeTest.spec.ts
+```
+
+Refer: https://playwright.dev/docs/api/class-browsertype#browser-type-launch-persistent-context

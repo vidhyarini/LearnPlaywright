@@ -59,10 +59,12 @@ test('toolshop test', async()=>{
     //const searchbtn:Locator = page.locator('[data-test="search-submit"]').describe("submit button");
     
     const searchbtn:Locator = page.getByTestId('search-submit').describe("submit button");
-
     const searchbtnExist = await searchbtn.isEnabled();
     console.log("searchbtnExist: "+searchbtnExist);
-    await searchbtn.click();
+    //await searchbtn.click();
+    
+    await page.getByRole('button',{name: 'Search '}).click();
+
 
     await page.screenshot({path: 'search.png'})
 
