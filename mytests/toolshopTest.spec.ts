@@ -79,5 +79,5 @@ test('toolshop test', async()=>{
     //if there is no name or text available but only one checkbox is visible
     //just use page.getByRole('checkbox').click();
 
-    await browser.close
+    await browser.close();
 })

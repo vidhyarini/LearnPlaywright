@@ -111,3 +111,33 @@ noConitomodeTest.spec.ts
 ```
 
 Refer: https://playwright.dev/docs/api/class-browsertype#browser-type-launch-persistent-context
+
+## Chaining Locators/selectors
+
+Its calling parent and child using the playwright commands
+In your test, right click on the left play button(Run button) -> Reveal in TestExplorer
+Click on Pick a locator -> opens a window -> enter application url in the window and open dev tools to inspect and find the playwright chainable command.
+for example:
+```
+playwright.$('form >> id=first_name')
+```
+Under a form there are many child sectors.Instead of writing everytime form and then calling firstname locator, Use this playwright command (form and firstname in same locator) in your test as:
+```
+await page.locator('form >> id=first_name').fill('Edison')
+```
+see screenshot
+
+![alt text](image-1.png)
+Refer: https://playwright.dev/docs/other-locators#chaining-selectors
+
+### Matching inside a locator
+for example:
+```
+const saveButton = page.getByRole('button', { name: 'Save' });
+// ...
+const dialog = page.getByTestId('settings-dialog');
+await dialog.locator(saveButton).click();
+```
+
+"saveButton" is used inside a locator, this also is a form of chaining locators
+Refer: https://playwright.dev/docs/locators#matching-inside-a-locator
