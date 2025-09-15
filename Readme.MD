@@ -141,3 +141,27 @@ await dialog.locator(saveButton).click();
 
 "saveButton" is used inside a locator, this also is a form of chaining locators
 Refer: https://playwright.dev/docs/locators#matching-inside-a-locator
+
+## Dropdown
+
+See the dropdown.spec.ts for selecting dropdown options
+
+- We have to get a variable as:
+    ```
+    const selectSubject = 'select#subject'; // select method and id of the Subject locator
+    ```
+- Using selectoption we can select by giving value,label or index
+    ```
+    await page.selectOption(selectSubject, {value: 'warranty'});
+    ```
+- In order get all the elements from the dropdown use css selector:
+   ```
+    select#subject > option
+   ```
+   ![alt text](image-2.png)
+
+   You can see the total elements are 7
+    ```
+   const allOptions = await page.$$(selectSubject + ' > option') // this method will return all the elements
+   console.log(allOptions.length);
+    ```

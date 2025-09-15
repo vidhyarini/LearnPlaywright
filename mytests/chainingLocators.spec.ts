@@ -1,4 +1,4 @@
-import {test, expect, type BrowserContext, type Page, Browser} from '@playwright/test'
+import {test, expect, type BrowserContext, type Page, type Browser} from '@playwright/test'
 import {webkit, chromium, firefox} from 'playwright'
 
 test('locator test', async() =>{
