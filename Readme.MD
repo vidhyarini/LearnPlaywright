@@ -162,6 +162,10 @@ See the dropdown.spec.ts for selecting dropdown options
 
    You can see the total elements are 7
     ```
-   const allOptions = await page.$$(selectSubject + ' > option') // this method will return all the elements
-   console.log(allOptions.length);
+    const allOptions = await page.$$(selectSubject + ' > option') // this method will return all the elements
+    console.log(allOptions.length);
     ```
+
+## Mouse Hover
+Use the first().hover and navigate until you click
+check the mousehover.spec.ts
