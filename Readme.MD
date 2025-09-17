@@ -73,6 +73,20 @@ USing this command, the playwright testrunner opens
         - Attachment tab - generated the error-context file
         - Locator tab - which is used to find or highlight an element or work with xpaths to find the element eg: //a[text()='Docs']
 
+## Tests
+- Import from @playwright/test and playwright
+    
+```
+    import {test, expect, type Browser, type Page, type Locator} from '@playwright/test'
+    import {webkit, chromium, firefox} from 'playwright'
+   ```
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
 ## Locators
 ### Locate by test id
 - In order to use a customed testattribute like data-test, you need to define it in playwright.config.ts under "use" like,
@@ -169,3 +183,15 @@ See the dropdown.spec.ts for selecting dropdown options
 ## Mouse Hover
 Use the first().hover and navigate until you click
 check the mousehover.spec.ts
+
+## Mouse Click different types
+    - Generic click (normal click)
+    - Double click
+    - Right click
+    - Shift + click
+    - Ctrl + click on Windows and Linux
+    - Hover over element
+    - Click the top left corner
+
+## Drag and Drop
+Check draganddrop test
