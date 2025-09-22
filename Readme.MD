@@ -199,3 +199,25 @@ Check draganddrop test
 ## Type characters sequentially with delay
 Use pressSequentially with a delay
 Refer typeslowly test
+
+## Upload file
+- Single file upload
+    ```
+    <input type="file" name="uploadfile_0" class="upload_txt" id="uploadfile_0" size="40">
+    ```
+    here there is no metioning of mulitple uploads then only one file can be uploaded.
+- Multiple file upload
+    ```
+    <input type="file" name="uploadfile_0" class="upload_txt" id="uploadfile_0" multiple onchange = "bfafjakfa" size="40">
+    ```
+    here it says multiple, so multiple number of files can be selected at a time and can be uploaded
+
+- upload file from buffer memory
+    Upload a file by creating in the runtime and upload it
+    ```
+    await page.locator("input[name='uploadfile_0']").setInputFiles({
+        name: 'test.txt',
+        mimeType: 'text/plain',
+        buffer: Buffer.from('this is test')
+    });
+    ```
