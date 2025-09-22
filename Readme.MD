@@ -195,3 +195,7 @@ check the mousehover.spec.ts
 
 ## Drag and Drop
 Check draganddrop test
+
+## Type characters sequentially with delay
+Use pressSequentially with a delay
+Refer typeslowly test
