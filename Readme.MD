@@ -57,7 +57,7 @@ If the fullyParallel is true the you can see test running in parallel in differe
     npx playwright show-report
     ```
 - Run the tests in UI mode with //a[text()='Docs'] in Locator tab in debugging mode
-USing this command, the playwright testrunner opens 
+USing this command, the playwright testrunner opens
         ```
         npx playwright test --ui
         ```
@@ -221,3 +221,17 @@ Refer typeslowly test
         buffer: Buffer.from('this is test')
     });
     ```
+
+## Focus on element
+Refer focusonelement test
+
+## Auto- wait feature
+It auto-waits for all the relevant checks to pass and only then performs the requested action. If the required checks do not pass within the given timeout, action fails with the TimeoutError
+
+default timeout in playwright - 30 secs
+
+Refer: https://playwright.dev/docs/actionability
+
+### CheatSheet
+
+![alt text](image-7.png)
